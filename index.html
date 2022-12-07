@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width = device-width, initial-scale = 1" />
+    <title>Art Gallery</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="goldformative.css" />
+  </head>
+  <body>
+    <!-- Adapted from (Bootstrap, 2022)-->
+    <!--Adapted from (W3schools, 2022)-->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <nav class="navbar navbar-expand navbar-dark bg-dark" id="navbar">
+      <div class="container-fluid">
+        <a href="#" class="navbar-brand">Carnegie Museum of Arts</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a
+              href="#"
+              class="nav-link dropdown-toggle"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Navigator
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#scrollspyRenaissance" class="dropdown-item"
+                  >Drawing and Watercolor</a
+                >
+              </li>
+              <li>
+                <a href="#scrollspyRomanticism" class="dropdown-item"
+                  >Paintings</a
+                >
+              </li>
+              <li>
+                <a href="#my_dataviz" class="dropdown-item">Work Types</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link active" aria-current="page">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#emailregistry" class="nav-link active" aria-current="page"
+              >Register!</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div
+      id="carouselExampleCaptions"
+      class="carousel slide"
+      data-bs-ride="false"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="3"
+          aria-label="Slide 4"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="CMOAexhibit.jpeg" class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            <h5 id="carouselcaptiontext">
+              Crossroads: Carnegie Mussum of Arts's Collection
+            </h5>
+            <i><p id="carouselcaptiontext">Jun 2022 - Ongoing</p></i>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="CMOAexhibit2.jpeg" class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            <h5 id="carouselcaptiontext">Carnegie Trees: Holiday Splendor</h5>
+            <i><p id="carouselcaptiontext">Nov 19 2022 - Jan 8 2023</p></i>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="CMOAexhibit3.jpeg" class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            <h5 id="carouselcaptiontext">58th Carnegie International</h5>
+            <p id="carouselcaptiontext">Sep 24 2022 - Apr 2 2023</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="CMOAexhibit4.jpeg" class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            <h5 id="carouselcaptiontext1">Neapolitan Presepio</h5>
+            <p id="carouselcaptiontext1">Nov 19 2022 - Jan 8 2023</p>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <div
+      class="container"
+      id="R-container"
+      data-bs-spy="scroll"
+      data-bs-target="navbar"
+    >
+      <h4 id="scrollspyRenaissance">Drawing and Watercolor Paintings</h4>
+      <p></p>
+    </div>
+    <div class="container imagebox">
+      <div class="image col-4">
+        <img src="dandw1.jpeg" alt="" />
+      </div>
+      <div class="image col-4">
+        <img src="dandw2.jpeg" alt="" />
+      </div>
+      <div class="image col-4">
+        <img src="dandw3.jpeg" alt="" />
+      </div>
+      <div class="Rcaption col-4">
+        <h6>"Wheat Fields after the Rain"</h6>
+        <i><p>Vincent van Gogh c.1890</p></i>
+      </div>
+      <div class="Rcaption col-4">
+        <h6>
+          "My Heart is Not Here, My Heart is in The Highlands Chasing The Deers"
+        </h6>
+        <i><p>Rokni Haerizadeh c.2013</p></i>
+      </div>
+      <div class="Rcaption col-4">
+        <h6>"Untitled"</h6>
+        <i><p>James Yaya Hough c.2008</p></i>
+      </div>
+      <div class="image col-4">
+        <img src="dandw4.jpeg" alt="" />
+      </div>
+      <div class="image col-4">
+        <img src="dandw5.jpeg" alt="" />
+      </div>
+      <div class="image col-4">
+        <img src="dandw6.jpeg" alt="" />
+      </div>
+      <div class="Rcaption col-4">
+        <h6>"Carl Sandburg"</h6>
+        <i><p>Carol Anthony c.1976</p></i>
+      </div>
+      <div class="Rcaption col-4">
+        <h6>"Rocky Headland, Isles of Shoals"</h6>
+        <i><p>Childe Hassam c.1903</p></i>
+      </div>
+      <div class="Rcaption col-4">
+        <h6>"Birmingham from the Top of Coal Hill"</h6>
+        <i><p>Russel Smith c.1834</p></i>
+      </div>
+      <div class="image col-4">
+        <img src="dandw7.jpeg" alt="" />
+      </div>
+      <div class="image col-4">
+        <img src="dandw8.jpeg" alt="" />
+      </div>
+      <div class="image col-4">
+        <img src="dandw9.jpeg" alt="" />
+      </div>
+      <div class="Rcaption col-4">
+        <h6>"Tibet: Camp Scene at Sonomarg in the Karakoram"</h6>
+        <i><p>Andrey Avinoff c.1912</p></i>
+      </div>
+      <div class="Rcaption col-4">
+        <h6>"Morpho remembrance of Things Past"</h6>
+        <i><p>Andrey Avinoff c.1948</p></i>
+      </div>
+      <div class="Rcaption col-4">
+        <h6>"Landscape"</h6>
+        <i><p>Samuel Rosenberg c. 1930</p></i>
+      </div>
+    </div>
+    <div
+      class="container"
+      id="R-container"
+      data-bs-spy="scroll"
+      data-bs-target="navbar"
+    >
+      <h4 id="scrollspyRomanticism">Paintings</h4>
+      <p></p>
+    </div>
+    <div class="container imagebox">
+      <div class="image col-4">
+        <img src="paint1.jpeg" alt="" />
+      </div>
+      <div class="image col-4">
+        <img src="paint2.jpeg" alt="" />
+      </div>
+      <div class="image col-4">
+        <img src="paint3.jpeg" alt="" />
+      </div>
+      <div class="Rcaption col-4">
+        <h6>"The Watchdog of the Beloved"</h6>
+        <i><p>Ger Lataster c.1958</p></i>
+      </div>
+      <div class="Rcaption col-4">
+        <h6>"Day Tripper"</h6>
+        <i><p>Sam Gilliam c.1971</p></i>
+      </div>
+      <div class="Rcaption col-4">
+        <h6>"Untitiled"</h6>
+        <i><p>Friedrich Kunath c.2006</p></i>
+      </div>
+      <div class="image col-4">
+        <img src="paint4.jpeg" alt="" />
+      </div>
+      <div class="image col-4">
+        <img src="paint5.jpeg" alt="" />
+      </div>
+      <div class="image col-4">
+        <img src="paint6.jpg" alt="" />
+      </div>
+      <div class="Rcaption col-4">
+        <h6>"Roses and Red Kimono"</h6>
+        <i><p>Warren Brandt c.1985</p></i>
+      </div>
+      <div class="Rcaption col-4">
+        <h6>"Giverny Winter"</h6>
+        <i><p>John Leslie Breck c.1888</p></i>
+      </div>
+      <div class="Rcaption col-4">
+        <h6>"Multiple Self-Portrait"</h6>
+        <i><p>Vincent Canade c.1935</p></i>
+      </div>
+      <div class="image col-4">
+        <img src="paint7.jpeg" alt="" />
+      </div>
+      <div class="image col-4">
+        <img src="paint8.jpeg" alt="" />
+      </div>
+      <div class="image col-4">
+        <img src="paint9.jpeg" alt="" />
+      </div>
+      <div class="Rcaption col-4">
+        <h6>"American Landscape"</h6>
+        <i><p>Robert S. Duncanson c.1852</p></i>
+      </div>
+      <div class="Rcaption col-4">
+        <h6>"Landscape study: autumn landscape"</h6>
+        <i><p>Alfred S. Wall c.1865</p></i>
+      </div>
+      <div class="Rcaption col-4">
+        <h6>"Orchard"</h6>
+        <i><p>Gustav Klimt c.1907</p></i>
+      </div>
+    </div>
+    <div class="container" id="buttoncontainer">
+      <button onclick="d3graph()" type="button" class="btn btn-dark">
+        Click here to hide graph
+      </button>
+    </div>
+    <div
+      class="container"
+      id="my_dataviz"
+      data-bs-spy="scroll"
+      data-bs-target="navbar"
+    >
+      <h5 id="d3caption">
+        The number of each type of accessioned work in the Carnegie Museum of
+        Arts database
+      </h5>
+    </div>
+    <script src="d3.js"></script>
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <div class="container" id="submission-form"></div>
+    <div class="container col-6">
+      <h4 id="form-input-text">Sign up for our mailing list!</h4>
+      <div
+        class="input-group mb-3"
+        data-bs-spy="scroll"
+        data-bs-target="navbar"
+        id="emailregistry"
+      >
+        <input
+          type="text"
+          class="form-control"
+          placeholder="User's Email"
+          aria-label="User's Email"
+          aria-describedby="button-addon1"
+          id="button-addon1"
+        />
+        <button
+          class="btn btn-outline-secondary"
+          type="submit"
+          id="button-addon2"
+          aria-required="true"
+          onclick="formsubmission()"
+        >
+          Register
+        </button>
+      </div>
+    </div>
+    <!--Harvard Referencing-->
+    <!--Thorton, J. and Otto, M. (no date) Navbar, · Bootstrap v5.2. Available at: https://getbootstrap.com/docs/5.2/components/navbar/ (Accessed: November 2, 2022). -->
+    <!--(no date) Bootstrap 5 carousel. Available at: https://www.w3schools.com/bootstrap5/bootstrap_carousel.php (Accessed: November 2, 2022). -->
+    <!-- Collection (no date) CMOA Collection. Available at: https://collection.cmoa.org/?page=1&amp;perPage=10 (Accessed: December 7, 2022). 
+    CSS margins (no date) CSS Margin. Available at: https://www.w3schools.com/css/css_margin.asp (Accessed: December 7, 2022). 
+    Holtz, Y. (no date) Ordered barplot in d3.js, The D3 Graph Gallery – Simple charts made with d3.js. Available at: https://d3-graph-gallery.com/graph/barplot_ordered.html (Accessed: December 7, 2022). 
+    Mark Otto, J.T. (no date) Buttons, · Bootstrap v5.2. Available at: https://getbootstrap.com/docs/5.2/components/buttons/ (Accessed: December 7, 2022). 
+    Mark Otto, J.T. (no date) Containers, · Bootstrap v5.2. Available at: https://getbootstrap.com/docs/5.2/layout/containers/ (Accessed: December 7, 2022). 
+    Mark Otto, J.T. (no date) Scrollspy, · Bootstrap v5.2. Available at: https://getbootstrap.com/docs/5.2/components/scrollspy/ (Accessed: December 7, 2022). 
+    Patel, A. (2021) How to count the same property values in array of objects, Medium. JavaScript in Plain English. Available at: https://javascript.plainenglish.io/how-to-count-the-same-property-values-in-array-of-objects-cc4719c5fc6d (Accessed: December 7, 2022).  -->
+  </body>
+</html>

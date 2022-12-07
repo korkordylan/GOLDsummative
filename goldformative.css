@@ -1,0 +1,95 @@
+body {
+    background-color: beige;
+  }
+  .carousel-item-active{
+    height: 200px;
+  }
+
+#carouselcaptiontext {
+  font-family: 'Times New Roman', Times, serif;
+  color: black;
+}
+
+#carouselcaptiontext1 {
+  font-family: 'Times New Roman', Times, serif;
+  color: white;
+}
+
+.carousel-item img {
+  max-height: 500px;
+  padding-bottom: 50px;
+}
+
+
+
+
+.imagebox{
+  border: 0px solid blue;
+  height: 1100px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+
+}
+
+.image{
+  border: 0px solid black;
+  height: auto;
+  max-height: 300px;
+  justify-content: center;
+  object-fit:fill;
+  display:flex;
+  padding-left: 50px;
+  padding-right: 50px;
+  
+}
+
+.image img{
+  max-height: 300px;
+  max-width: 100%;
+  align-content: center;
+  object-fit: contain;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+
+}
+
+.Rcaption {
+  text-align: center;
+  padding-top: 20px;
+}
+
+#scrollspyRenaissance{
+  text-align: center;
+  padding-top: 20px;
+}
+
+#scrollspyRomanticism{
+  text-align: center;
+  padding-top: 50px;
+  
+}
+
+#my_dataviz {
+  align-content: space-around;
+  padding-left: 250px;
+}
+#form-input-text {
+  padding-top: 50px;
+}
+
+#submission-form {
+  width: 200px;
+}
+
+
+#buttoncontainer {
+  padding-top: 50px;
+}
+
+#d3caption{
+  padding-top: 50px;
+}
